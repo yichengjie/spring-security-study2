@@ -1,0 +1,1 @@
+1. 自定义AuthenticationProvider,实现图形验证码功能

@@ -1,1 +1,1 @@
-1. 图形验证码
+1. 自定义AuthenticationProvider
