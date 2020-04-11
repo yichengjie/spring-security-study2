@@ -21,7 +21,8 @@
     </properties>
 
 	 <modules>
-        <module>../helloworld</module>
+        <module>../chapter1</module>
+		<module>../chapter2</module>
     </modules>
 
     <dependencies>
