@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 @MapperScan("com.yicj.hello.mapper")
-public class VerificationCodeApplication {
+public class AutoLoginApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(VerificationCodeApplication.class,args) ;
+        SpringApplication.run(AutoLoginApplication.class,args) ;
     }
 
     @GetMapping("/hello")
