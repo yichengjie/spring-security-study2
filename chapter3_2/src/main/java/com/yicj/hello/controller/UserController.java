@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/user/api")
 public class UserController {
 
-    @Autowired
-    private UserDetailsService userDetailsService ;
-
     @GetMapping("hello")
     public String hello(){
         return "hello, user" ;
