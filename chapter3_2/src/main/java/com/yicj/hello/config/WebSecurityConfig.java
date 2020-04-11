@@ -30,11 +30,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private MyAuthenticationProvider authenticationProvider ;
 
 
-   /* @Override
+   @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         //应用AuthenticationProvider
         auth.authenticationProvider(authenticationProvider) ;
-    }*/
+    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -53,30 +53,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .loginProcessingUrl("/auth/form")
             .permitAll()
             .failureHandler(new MyAuthenticationFailureHandler());
-    }
-
-    @Bean
-    public Producer captcha(){
-        //配置图形验证码的基本参数
-        Properties properties = new Properties() ;
-        //图片宽度
-        properties.setProperty("kaptcha.image.width","150") ;
-        //图片长度
-        properties.setProperty("kaptcha.image.height","50") ;
-        //字符集
-        properties.setProperty("kaptcha.textproducer.char.string","0123456789") ;
-        //字符长度
-        properties.setProperty("kaptcha.textproducer.char.length","4") ;
-        Config config = new Config(properties);
-        //使用默认的图片验证码实现，当然也可以自定义实现
-        DefaultKaptcha defaultKaptcha = new DefaultKaptcha() ;
-        defaultKaptcha.setConfig(config);
-        return defaultKaptcha;
-    }
-
-    @Bean
-    public PasswordEncoder passwordEncoder(){
-        return NoOpPasswordEncoder.getInstance() ;
     }
 
 }
