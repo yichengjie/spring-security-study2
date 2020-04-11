@@ -27,11 +27,12 @@
     </properties>
 
 	 <modules>
-        <module>chapter1</module>
-		<module>chapter2</module>
-		<module>chapter3</module>
-		<module>chapter3_1</module>
-		<module>chapter3_2</module>
+        <module>chapter01</module>
+		<module>chapter02</module>
+		<module>chapter03</module>
+		<module>chapter03_1</module>
+		<module>chapter03_2</module>
+		<module>chapter04</module>
     </modules>
 
     <dependencies>
