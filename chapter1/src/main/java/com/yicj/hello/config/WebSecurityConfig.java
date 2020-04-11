@@ -70,7 +70,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         @Override
         public void onAuthenticationFailure(HttpServletRequest request,
-                HttpServletResponse response, AuthenticationException e) throws IOException, ServletException {
+                                            HttpServletResponse response, AuthenticationException e) throws IOException, ServletException {
             response.setContentType("application/json;charset=UTF-8");
             response.setStatus(401);
             PrintWriter out = response.getWriter();
