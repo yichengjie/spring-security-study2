@@ -10,19 +10,25 @@
         <version>2.2.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.yicj.security</groupId>
-    <artifactId>security-parent</artifactId>
+    <artifactId>spring-security-study2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>security-parent</name>
+    <name>spring-security-study2</name>
     <description>Demo project for Spring Boot</description>
 
+
     <properties>
+        <imooc.securiity.version>1.0-SNAPSHOT</imooc.securiity.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
         <java.version>1.8</java.version>
     </properties>
 
 	 <modules>
-        <module>../chapter1</module>
-		<module>../chapter2</module>
+        <module>chapter1</module>
+		<module>chapter2</module>
     </modules>
 
     <dependencies>
