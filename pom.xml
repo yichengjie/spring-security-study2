@@ -27,12 +27,14 @@
     </properties>
 
 	 <modules>
-        <module>chapter01</module>
-		<module>chapter02</module>
-		<module>chapter03</module>
-		<module>chapter03_1</module>
-		<module>chapter03_2</module>
-		<module>chapter04</module>
+        <module>helloworld</module>
+		<module>authentica-authoriza</module>
+		<module>verification-code</module>
+		<module>verification-code_1</module>
+		<module>verification-code_2</module>
+		<module>remberme</module>
+		<module>logout</module>
+		<module>session-manager</module>
     </modules>
 
     <dependencies>
