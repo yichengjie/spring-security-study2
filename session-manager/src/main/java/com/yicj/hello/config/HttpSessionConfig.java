@@ -15,20 +15,32 @@ import org.springframework.session.security.SpringSessionBackedSessionRegistry;
 @EnableRedisHttpSession
 public class HttpSessionConfig {
 
-    @Autowired
-    private FindByIndexNameSessionRepository sessionRepository ;
-
     //提供redis连接，默认localhost:6379
+//    @Bean
+//    public RedisConnectionFactory connectionFactory(){
+//        RedisStandaloneConfiguration redisStandaloneConfiguration =
+//                new RedisStandaloneConfiguration();
+//        redisStandaloneConfiguration.setHostName("127.0.0.1");
+//        redisStandaloneConfiguration.setDatabase(0);
+//        redisStandaloneConfiguration.setPassword(RedisPassword.of("123456"));
+//        redisStandaloneConfiguration.setPort(6379);
+//        return new JedisConnectionFactory(redisStandaloneConfiguration) ;
+//    }
+
+
     @Bean
-    public RedisConnectionFactory connectionFactory(){
-        RedisStandaloneConfiguration redisStandaloneConfiguration =
-                new RedisStandaloneConfiguration();
+    public JedisConnectionFactory connectionFactory() {
+        RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration();
         redisStandaloneConfiguration.setHostName("localhost");
         redisStandaloneConfiguration.setDatabase(0);
         redisStandaloneConfiguration.setPassword(RedisPassword.of("123456"));
         redisStandaloneConfiguration.setPort(6379);
-        return new JedisConnectionFactory() ;
+        return new JedisConnectionFactory(redisStandaloneConfiguration);
     }
+
+
+    @Autowired
+    private FindByIndexNameSessionRepository sessionRepository ;
 
     //SpringSessionBackedSessionRegistry是session为Spring Security提供的
     //用于在集群环境下控制会话并发的会话注册实现类

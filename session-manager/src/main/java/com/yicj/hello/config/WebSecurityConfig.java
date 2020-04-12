@@ -1,20 +1,11 @@
 package com.yicj.hello.config;
 
-import com.yicj.hello.handler.MyAuthenticationFailureHandler;
-import com.yicj.hello.service.MyUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
-import org.springframework.security.web.session.InvalidSessionStrategy;
 import org.springframework.session.security.SpringSessionBackedSessionRegistry;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.sql.DataSource;
-import java.io.IOException;
+//import org.springframework.session.security.SpringSessionBackedSessionRegistry;
 
 
 @EnableWebSecurity
