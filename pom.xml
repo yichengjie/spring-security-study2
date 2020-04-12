@@ -35,7 +35,8 @@
 		<module>remberme</module>
 		<module>logout</module>
 		<module>session-manager</module>
-    </modules>
+         <module>social-oauth</module>
+     </modules>
 
     <dependencies>
 
